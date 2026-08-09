@@ -6,9 +6,9 @@ Runs entirely on free tiers.
 ## 1. First things first — edit `lib/config.js`
 
 Open `lib/config.js` and fill in:
-- `name`: your shop's name
+- `name`: The Great Dahanu Shop (HomeHeaven)
 - `whatsappNumber`: your WhatsApp number in international format, digits only
-  (e.g. a Mumbai number 98765 43210 becomes `"919876543210"`)
+  (e.g. a Mumbai number 98765 43210 becomes `"919503690140"`)
 - `phoneDisplay`: how you want your number shown on the site
 
 ## 2. Run it locally
