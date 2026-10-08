@@ -8,9 +8,9 @@ module.exports = {
     extend: {
       colors: {
         stone: {
-          bg: "#EFEDE7",
-          surface: "#FFFFFF",
-          border: "#DFDBD2",
+          bg: "#FFFFFF",
+          surface: "#F6F6F4",
+          border: "#E7E4DC",
         },
         ink: {
           DEFAULT: "#23221E",
@@ -32,6 +32,8 @@ module.exports = {
       },
       boxShadow: {
         shelf: "0 18px 20px -18px rgba(35, 34, 30, 0.35)",
+        card: "0 1px 2px rgba(35, 34, 30, 0.06)",
+        "card-hover": "0 12px 24px -12px rgba(35, 34, 30, 0.18)",
       },
     },
   },

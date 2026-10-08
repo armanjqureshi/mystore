@@ -42,27 +42,31 @@ export default function ShopClient({ initialProducts, initialCategory = "all" })
   }, [initialProducts, filters]);
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-12">
-      <div className="mb-10 flex items-baseline justify-between">
-        <Link href="/" className="font-display text-2xl">
-          {SITE.name}
-        </Link>
-        <span className="text-sm text-ink-muted">{filtered.length} products</span>
+    <main>
+      <div className="sticky top-0 z-10 border-b border-stone-border bg-white/90 backdrop-blur">
+        <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="font-display text-xl">
+            {SITE.name}
+          </Link>
+          <span className="text-sm text-ink-muted">{filtered.length} products</span>
+        </div>
       </div>
 
-      <FilterBar filters={filters} setFilters={setFilters} />
+      <div className="mx-auto max-w-6xl px-6 py-8">
+        <FilterBar filters={filters} setFilters={setFilters} />
 
-      {filtered.length === 0 ? (
-        <p className="text-ink-muted py-16 text-center">
-          No products match those filters yet. Try clearing a filter.
-        </p>
-      ) : (
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      )}
+        {filtered.length === 0 ? (
+          <p className="text-ink-muted py-16 text-center">
+            No products match those filters yet. Try clearing a filter.
+          </p>
+        ) : (
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        )}
+      </div>
     </main>
   );
 }

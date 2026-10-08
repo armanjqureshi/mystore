@@ -29,13 +29,13 @@ export default async function Home() {
             </Link>
           </div>
 
-          {/* shelf motif: a row of category "labels" like tags on a physical shelf */}
+          {/* category tiles, marketplace-style */}
           <div className="grid grid-cols-2 gap-3 w-full md:w-64">
             {CATEGORIES.map((c) => (
               <Link
                 key={c.slug}
                 href={`/shop?category=${c.slug}`}
-                className="rounded-md border border-stone-border bg-stone-surface px-4 py-3 text-sm shadow-shelf hover:border-ink transition-colors"
+                className="rounded-xl border border-stone-border bg-white px-4 py-3 text-sm shadow-card hover:shadow-card-hover hover:border-ink transition-all"
               >
                 {c.label}
               </Link>
